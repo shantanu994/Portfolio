@@ -1,5 +1,4 @@
-*{
-    
+*{    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,6 +12,7 @@ body {
     color: black;
 }
 .container{
+    position: sticky;
     background-color: white;
     display: flex;
     align-items: flex-start;
@@ -29,23 +29,62 @@ h1 {
     gap : 60px;
     display: flex;
     text-align: end;
-    font-size: 30px;
-    margin-left: 500px;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: 100px;
     margin-top: 10px;
     padding: 10px;
-    
+}
+.about_me{
+    display: flex;
+    align-items: center;
 }
 #about{
     font-size: 30px;    
     color: white;
-    margin-top : 100px;
+    margin-top : 40px;
     margin-left: 50px;
-    margin-right: 500px;
-    height: 400px;
     padding: 40px;
 }
-#about h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
-
+#pic{
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 20px;
+}
+.projects_button{
+    display: flex;
+    margin-left: 400px;
+    gap: 400px;
+}
+#skills button{
+    margin-left: 20px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #06b6d4;
+    color: white;
+}
+#skills button:hover{
+    background-color: #0e7490;
+    cursor: pointer;
+    box-shadow: lightblue 0px 4px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#projects button{
+    margin-left: 20px;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #06b6d4;
+    color: white;
+}
+#projects button:hover{
+    background-color: #0e7490;
+    cursor:pointer ;
+    box-shadow: lightblue 0px 4px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
