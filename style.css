@@ -110,8 +110,9 @@ h1 {
     font-size: 25px;
     margin: 20px;
     padding: 20px;
-    
-    
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #myself{
     margin-top: 20px;
@@ -122,4 +123,15 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#connect{
+    display: block;
+    margin: 20px auto; 
+    padding: 15px 30px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #06b6d4;
+    color: white;
 }
