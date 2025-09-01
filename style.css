@@ -59,7 +59,7 @@ h1:hover {
   display: flex;
   align-items: center;
 }
-#about {
+#my {
   font-size: 30px;
   color: white;
   margin-top: 40px;
@@ -71,47 +71,45 @@ h1:hover {
   margin-right: 100px;
   width: 500px;
   height: 500px;
-  margin-bottom: 20px;
 }
 .projects_button {
   display: flex;
   margin-left: 400px;
   gap: 400px;
+  margin-bottom: 100px;
 }
-#skills button {
-  margin-left: 20px;
-  padding: 10px;
-  font-size: 30px;
-  margin-bottom: 40px;
-  border-radius: 10px;
-  border: none;
+.nav_link {
+  text-decoration: none;
   background-color: white;
   color: black;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 20px;
 }
-#skills button:hover {
+.nav_link:hover {
   background-color: #06b6d4;
   color: white;
   box-shadow: lightblue 0px 4px 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-#projects button {
-  margin-left: 20px;
-  padding: 10px;
-  font-size: 30px;
-  border-radius: 10px;
-  border: none;
-  background-color: white;
-  color: black;
-}
-#projects button:hover {
+#skills .nav_link:hover {
   background-color: #06b6d4;
   color: white;
   box-shadow: lightblue 0px 4px 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-.about {
+#projects .nav_link:hover {
+  background-color: #06b6d4;
+  color: white;
+  box-shadow: lightblue 0px 4px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+#about {
   background-color: white;
   margin: 20px;
   padding: 20px;
@@ -119,7 +117,7 @@ h1:hover {
   border-radius: 10px;
   text-align: left;
 }
-.about h2 {
+#about h2 {
   text-align: center;
   font-size: 40px;
   margin-bottom: 20px;
@@ -134,6 +132,24 @@ h1:hover {
   border-radius: 10px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.navlink {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 616px;
+}
+.navlink:hover {
+  background-color: #06b6d4;
+  color: white;
+  box-shadow: lightblue 0px 4px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 #myself {
   margin-top: 20px;
