@@ -1,137 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>
-            Portfolio
-        </h1>
-        <div class="navbar">
-            <a class="nav-link" href="About">About Me</a>
-            <a class="nav-link" href="Contact">Contact</a>
-        </div>
+      <h1>Portfolio</h1>
+      <div class="navbar">
+        <a class="nav-link" href="About">About Me</a>
+        <a class="nav-link" href="Contact">Contact</a>
+      </div>
     </div>
     <div class="about_me">
-        <div id="about">
-            <p>I’m Shantanu Kulkarni, a Computer Science student passionate about coding and web development. I enjoy working with Python, JavaScript, C++ and C, and love building projects that combine creativity and problem-solving.
+      <div id="about">
+        <p>
+          I’m Shantanu Kulkarni, a Computer Science student passionate about
+          coding and web development. I enjoy working with Python, JavaScript,
+          C++ and C, and love building projects that combine creativity and
+          problem-solving.
         </p>
-        </div>
-        <img id = "pic" src="image/undraw_portfolio_btd8.svg" alt="Portfolio Image">
+      </div>
+      <img
+        id="pic"
+        src="image/undraw_portfolio_btd8.svg"
+        alt="Portfolio Image"
+      />
     </div>
     <div class="projects_button">
-        <div id="skills">
-            <button onclick="showSkills()">My Skills</button>
-        </div>
-        <div id="projects">
-           <button onclick="showProjects()">My Projects</button>
-        </div>
+      <div id="skills">
+        <button onclick="showSkills()">My Skills</button>
+      </div>
+      <div id="projects">
+        <button onclick="showProjects()">My Projects</button>
+      </div>
     </div>
-    <div class ="about">
-        <img id="myself" src="image/shantanu.jpg" alt="My Photo">
-        <h2>About Me</h2>
-        <div class ="me">
-            <p>I'm currently in my second year studying Computer Engineering at AISSMS Institute of Information Technology. I'm fascinated by [Specific Interest Area, e.g., artificial intelligence, renewable energy, robotics] and love diving into new challenges.</p>
-            <p>
-            My coursework has provided a strong foundation in [Mention 1-2 core subjects, e.g., data structures, circuit analysis], and I'm actively exploring how to apply these concepts through personal projects and student organizations. I'm always excited to expand my knowledge and collaborate on innovative ideas!</p>
-        </div>
-        <button id="connect" onclick="connect()">Lets's Connect</button>
+    <div class="about">
+      <img id="myself" src="image/shantanu.jpg" alt="My Photo" />
+      <h2>About Me</h2>
+      <div class="me">
+        <p>
+          I'm currently in my second year studying Computer Engineering at
+          AISSMS Institute of Information Technology. I'm fascinated by
+          [Specific Interest Area, e.g., artificial intelligence, renewable
+          energy, robotics] and love diving into new challenges.
+        </p>
+        <p>
+          My coursework has provided a strong foundation in [Mention 1-2 core
+          subjects, e.g., data structures, circuit analysis], and I'm actively
+          exploring how to apply these concepts through personal projects and
+          student organizations. I'm always excited to expand my knowledge and
+          collaborate on innovative ideas!
+        </p>
+      </div>
+      <button id="connect" onclick="connect()">Lets's Connect</button>
     </div>
-    <section class="my_developing_skills" >
-        <div id="container">
-            <h2 id="section_title">My Developing Skills</h2>
-            <div id="skills_container">
-                <div class="skill_card">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>HTML & CSS</li>
-                    <li>C++</li>
-                    <li>C</li>
-                    </ul>
-                </div>
-                <div class="skill_card">
-                    <h3>Tools & Software</h3>
-                    <ul>
-                    <li>Git & GitHub</li>
-                    <li>Visual Studio Code</li>
-                    </ul>
-                </div>
-                <div class="skill_card">
-                    <h3>Concepts</h3>
-                    <ul>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Object-Oriented Programming</li>
-                    <li>Web Development</li>
-                    </ul>
-                </div>
-                <div class="skill_card">
-                    <h3>Learning Intersets</h3>
-                    <ul>
-                    <li>Software Development & Programming</li>
-                    <li>Web Development</li>
-                    <li>Data Science & Machine Learning</li>
-                    </ul>
-                </div>
-            </div>
+    <section class="my_developing_skills">
+      <div id="container">
+        <h2 id="section_title">My Developing Skills</h2>
+        <div id="skills_container">
+          <div class="skill_card">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML & CSS</li>
+              <li>C++</li>
+              <li>C</li>
+            </ul>
+          </div>
+          <div class="skill_card">
+            <h3>Tools & Software</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Visual Studio Code</li>
+            </ul>
+          </div>
+          <div class="skill_card">
+            <h3>Concepts</h3>
+            <ul>
+              <li>Data Structures & Algorithms</li>
+              <li>Object-Oriented Programming</li>
+              <li>Web Development</li>
+            </ul>
+          </div>
+          <div class="skill_card">
+            <h3>Learning Intersets</h3>
+            <ul>
+              <li>Software Development & Programming</li>
+              <li>Web Development</li>
+              <li>Data Science & Machine Learning</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
-    <section>
-        <div class="projects">
-            <div class="container">
-                <h2 class="section-title">My Academic & Personal Projects</h2>
-                <div class="projectgrid">
 
-                    <div class="project-card" id="project-1">
-                        <div class="project-card-content">
-                        <h3>My Portfolio Website</h3>
-                        <p id="project-desc-1">
-                            Developed a personal portfolio website to showcase my projects and skills. Focused on responsive design and user experience.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tags">HTML</span>
-                            <span class="project-tags">CSS</span>
-                            <span class="project-tags">JavaScript</span>
-                        </div>
-                        <a href="https://shantanu994.github.io/Portfolio/" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card" id="project-2">
-                        <div class="project-card-content">
-                        <h3>AI Prompt Generator</h3>
-                        <p id="project-desc-2">
-                            Created an AI-powered prompt generator to assist writers in brainstorming ideas. Utilized natural language processing techniques.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tags">HTML</span>
-                            <span class="project-tags">CSS</span>
-                            <span class="project-tags">JavaScript</span>
-                        </div>
-                        <a href="https://shantanu994.github.io/AI-Prompt-Generator/" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card" id="project-3">
-                        <div class="project-card-content">
-                        <h3>Solar Cost Estimator</h3>
-                        <p id="project-desc-3">
-                            Developed a solar cost estimator tool to help users calculate the potential savings of installing solar panels. Focused on user-friendly design and accurate data representation. Developed as a group project in my Renewable Energy class.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tags">HTML</span>
-                            <span class="project-tags">CSS</span>
-                            <span class="project-tags">JavaScript</span>
-                        </div>
-                        <a href="https://shantanu994.github.io/Solar-Cost-Estimator/" class="project-link">View Project</a>
-                    </div>
-                </div>
+    <section id="projects">
+      <h2 id="section_title">My Academic & Personal Projects</h2>
+      <div class="container">
+        <div class="projects-grid">
 
+          <div class="project-card" id="project-1">
+            <div class="project-card-content">
+              <h3>AI Prompt Generator</h3>
+              <p id="project-desc-1">
+                Our AI Prompt Generator helps you create unique, high-quality
+                prompts tailored for ChatGPT, MidJourney, and other AI tools.
+                Whether you’re brainstorming ideas, writing content, or building
+                projects, this tool gives you fresh, creative prompts in
+                seconds.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">Javascript</span>
+              </div>
+              <a href="#" class="project-link">View on GitHub </a>
             </div>
+          </div>
 
+          <div class="project-card" id="project-2">
+            <div class="project-card-content">
+              <h3>Solar Cost Estimator</h3>
+              <p id="project-desc-2">
+                The Solar Cost Estimator is a simple web tool that helps users
+                understand the potential cost and benefits of installing solar
+                panels. By entering basic details, users can instantly estimate
+                installation costs, energy savings, and payback period.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <a href="#" class="project-link">View Live Demo &rarr;</a>
+            </div>
+          </div>
+
+          <div class="project-card" id="project-3">
+            <div class="project-card-content">
+              <h3>Solar Charging Hub</h3>
+              <p id="project-desc-3">
+                A portable solar-powered hub for charging multiple devices on
+                the go.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">C++</span>
+                <span class="project-tag">Arduino</span>
+                <span class="project-tag">Teamwork</span>
+              </div>
+              <a href="#" class="project-link">Learn More &rarr;</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
