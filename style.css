@@ -275,26 +275,19 @@ h1:hover {
   color: black;
   font-weight: 500;
 }
-.connect_section {
-  background-color: white;
-}
-.section_title {
-  color: var(--text-light);
-}
-.connect_section h2 {
+.contact_section h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 40px;
   margin-right: auto;
-  color: black;
-  background-color: white;
+  color: white;
   padding: 20px;
   border-radius: 10px;
 }
-.connect_section p {
-  color: white;
-  font-size: 20px;
+.contact_section p {
+  color: blacke;
+  font-size: 30px;
   margin-bottom: 20px;
   margin-top: 40px;
   text-align: center;
