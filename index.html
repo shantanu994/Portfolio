@@ -1,213 +1,889 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Shantanu Kulkarni | Software Developer, Backend, Cloud &amp; AI Projects
+    </title>
+    <meta
+      name="description"
+      content="Shantanu Kulkarni is a Computer Engineering student in Pune building backend, cloud/DevOps and AI-powered projects. Seeking software engineering internships."
+    />
+    <meta
+      property="og:title"
+      content="Shantanu Kulkarni | Software Developer"
+    />
+    <meta
+      property="og:description"
+      content="Backend, cloud/DevOps and AI projects by a Computer Engineering student in Pune."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://shantanu994.github.io/Portfolio/"
+    />
+    <meta name="theme-color" content="#0c1a21" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c1a21'/%3E%3Cpath d='M4 17h6l3-8 5 15 3-7h7' fill='none' stroke='%2379d9c0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c1a21;
+        --panel: #112530;
+        --line: #23404d;
+        --text: #e6eef1;
+        --mute: #93a9b2;
+        --up: #79d9c0;
+        --warm: #e7b657;
+        --r: 14px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 72px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          400 1.0625rem/1.65 "IBM Plex Sans",
+          system-ui,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+        line-height: 1.1;
+        margin: 0;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 2px solid var(--up);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 22px;
+      }
+      .skip {
+        position: absolute;
+        left: -999px;
+      }
+      .skip:focus {
+        left: 12px;
+        top: 12px;
+        background: var(--up);
+        color: #06201a;
+        padding: 8px 14px;
+        z-index: 99;
+        border-radius: 8px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(12, 26, 33, 0.88);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+      }
+      .logo {
+        font:
+          800 1.05rem "Bricolage Grotesque",
+          sans-serif;
+        text-decoration: none;
+      }
+      nav ul {
+        display: flex;
+        gap: 26px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--mute);
+        font-size: 0.95rem;
+      }
+      nav a:hover {
+        color: var(--text);
+      }
+      #menu {
+        display: none;
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--text);
+        padding: 6px 14px;
+        border-radius: 8px;
+        font: inherit;
+      }
+      section {
+        padding: 84px 0 12px;
+      }
+      h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: 12px;
+      }
+      .lead {
+        color: var(--mute);
+        max-width: 60ch;
+        margin: 0 0 34px;
+      }
+      /* hero */
+      .hero {
+        padding-top: 84px;
+      }
+      .pill {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        border: 1px solid var(--line);
+        padding: 6px 14px;
+        border-radius: 99px;
+        color: var(--mute);
+        font-size: 0.9rem;
+      }
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--up);
+        box-shadow: 0 0 0 0 rgba(121, 217, 192, 0.6);
+        animation: ping 2.4s infinite;
+      }
+      @keyframes ping {
+        70% {
+          box-shadow: 0 0 0 9px rgba(121, 217, 192, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(121, 217, 192, 0);
+        }
+      }
+      h1 {
+        font-size: clamp(2.8rem, 9vw, 5.8rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin: 22px 0 14px;
+      }
+      .role {
+        color: var(--up);
+        font-weight: 500;
+        margin: 0 0 14px;
+      }
+      .hero p.sum {
+        max-width: 56ch;
+        color: var(--mute);
+        font-size: 1.15rem;
+        margin: 0 0 28px;
+      }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        font-weight: 500;
+        transition:
+          transform 0.15s,
+          border-color 0.15s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        border-color: var(--up);
+      }
+      .btn.p {
+        background: var(--up);
+        color: #06201a;
+        border-color: var(--up);
+      }
+      .bars {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        height: 64px;
+        margin-top: 56px;
+      }
+      .bars i {
+        flex: 1;
+        border-radius: 3px;
+        background: var(--up);
+        height: var(--h);
+        transform-origin: bottom;
+        opacity: 0;
+        animation: rise 0.5s ease-out forwards;
+        animation-delay: calc(var(--i) * 18ms + 0.3s);
+      }
+      .bars i.w {
+        background: var(--warm);
+      }
+      @keyframes rise {
+        from {
+          transform: scaleY(0.1);
+          opacity: 0;
+        }
+        to {
+          transform: none;
+          opacity: 0.85;
+        }
+      }
+      /* about */
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 8px;
+      }
+      .fact {
+        border-left: 2px solid var(--line);
+        padding: 2px 0 2px 16px;
+      }
+      .fact b {
+        display: block;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 2px;
+      }
+      .fact span {
+        color: var(--mute);
+        font-size: 0.97rem;
+      }
+      /* projects */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 18px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--r);
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        grid-column: span 2;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .card:hover {
+        border-color: #3b6475;
+        transform: translateY(-3px);
+      }
+      .card.t1 {
+        grid-column: span 6;
+        padding: 34px;
+      }
+      .card.t2 {
+        grid-column: span 3;
+      }
+      .card h3 {
+        font-size: 1.35rem;
+      }
+      .card.t1 h3 {
+        font-size: 2rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--mute);
+      }
+      .tag {
+        font-size: 0.85rem;
+        color: var(--warm);
+      }
+      .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: auto;
+      }
+      .stack span {
+        font-size: 0.82rem;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 2px 9px;
+        color: var(--mute);
+      }
+      .acts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 0.95rem;
+        align-items: center;
+      }
+      .acts button {
+        background: none;
+        border: 0;
+        color: var(--up);
+        font: inherit;
+        cursor: pointer;
+        padding: 0;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .acts a {
+        color: var(--text);
+        text-underline-offset: 4px;
+      }
+      .older {
+        margin-top: 30px;
+        color: var(--mute);
+        font-size: 0.97rem;
+      }
+      .older a {
+        color: var(--text);
+      }
+      dialog {
+        background: var(--panel);
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: var(--r);
+        max-width: 680px;
+        width: calc(100% - 28px);
+        padding: 30px;
+        max-height: 88vh;
+        overflow: auto;
+      }
+      dialog::backdrop {
+        background: rgba(4, 10, 13, 0.72);
+      }
+      dialog h3 {
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+      }
+      dialog h4 {
+        margin: 22px 0 4px;
+        font-size: 1rem;
+        color: var(--up);
+      }
+      dialog p,
+      dialog li {
+        color: var(--mute);
+        margin: 0;
+      }
+      dialog ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+      .x {
+        float: right;
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--text);
+        border-radius: 8px;
+        padding: 4px 12px;
+        font: inherit;
+        cursor: pointer;
+      }
+      /* skills */
+      dl {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+        gap: 0;
+        margin: 0;
+        border-top: 1px solid var(--line);
+      }
+      dt,
+      dd {
+        margin: 0;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      dt {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-weight: 600;
+      }
+      dd {
+        color: var(--mute);
+      }
+      .learn {
+        color: var(--warm);
+      }
+      .now {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+      }
+      .now div {
+        border: 1px solid var(--line);
+        border-radius: var(--r);
+        padding: 20px;
+      }
+      .now h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+      }
+      .now p {
+        margin: 0;
+        color: var(--mute);
+        font-size: 0.97rem;
+      }
+      /* contact */
+      .contact {
+        padding-bottom: 70px;
+      }
+      .cta {
+        font-size: clamp(1.9rem, 5vw, 3.2rem);
+        margin-bottom: 18px;
+      }
+      .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+        margin-top: 26px;
+      }
+      .links a {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 18px;
+        text-decoration: none;
+        display: block;
+        transition: border-color 0.15s;
+      }
+      .links a:hover {
+        border-color: var(--up);
+      }
+      .links small {
+        display: block;
+        color: var(--mute);
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 22px 0;
+        color: var(--mute);
+        font-size: 0.9rem;
+      }
+      @media (max-width: 820px) {
+        .card,
+        .card.t2 {
+          grid-column: span 6;
+        }
+        dl {
+          grid-template-columns: 1fr;
+        }
+        dt {
+          border: 0;
+          padding-bottom: 0;
+        }
+      }
+      @media (max-width: 720px) {
+        #menu {
+          display: block;
+        }
+        nav ul {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          right: 0;
+          background: var(--bg);
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 16px 22px;
+          border-bottom: 1px solid var(--line);
+          gap: 14px;
+        }
+        nav ul.open {
+          display: flex;
+        }
+        .hero {
+          padding-top: 56px;
+        }
+        .bars {
+          height: 48px;
+          margin-top: 40px;
+        }
+        .bars i:nth-child(n + 31) {
+          display: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .bars i {
+          opacity: 0.85;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Portfolio</h1>
-      <div class="navbar">
-        <a class="nav-link" href="#about">About Me</a>
-        <a class="nav-link" href="#contact">Contact</a>
+    <a class="skip" href="#projects">Skip to projects</a>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="#top">Shantanu Kulkarni</a>
+        <nav aria-label="Main">
+          <button id="menu" aria-expanded="false" aria-controls="nl">
+            Menu
+          </button>
+          <ul id="nl">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li>
+              <a href="https://github.com/shantanu994" rel="noopener">GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/shantanu-kulkarni994/"
+                rel="noopener"
+                >LinkedIn</a
+              >
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="about_me">
-      <div id="my">
-        <p>
-          I’m Shantanu Kulkarni, a Computer Science student passionate about
-          coding and web development. I enjoy working with Python, JavaScript,
-          C++ and C, and love building projects that combine creativity and
-          problem-solving.
-        </p>
-      </div>
-      <img
-        id="pic"
-        src="image/undraw_portfolio_btd8.svg"
-        alt="Portfolio Image"
-      />
-    </div>
-    <div class="projects_button">
-      <div id="skills">
-        <a class="nav_link" href="#my_developing_skills">My Skills</a>
-      </div>
-      <div id="projects">
-        <a class="nav_link" href="#project">My Projects</a>
-      </div>
-    </div>
-    <div id="about">
-      <img id="myself" src="image/shantanu.jpg" alt="My Photo" />
-      <h2>About Me</h2>
-      <div class="me">
-        <p>
-          I'm currently in my second year studying Computer Engineering at
-          AISSMS Institute of Information Technology. I'm fascinated by
-          Artificial intelligence, Web development and love diving into new challenges.
-        </p>
-        <p>
-          My coursework has provided a strong foundation in data structures and
-          algorithms, and I'm actively exploring how to apply these concepts through personal projects and
-          student organizations. I'm always excited to expand my knowledge and
-          collaborate on innovative ideas!
-        </p>
-      </div>
-      <a class="navlink" href="#contact">Let's Connect</a>
-    </div>
-    <section id="my_developing_skills">
-      <div id="container">
-        <h2 id="section_title">My Developing Skills</h2>
-        <div id="skills_container">
-          <div class="skill_card">
-            <h3>Programming Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>HTML & CSS</li>
-              <li>REACT</li>
-              <li>C++</li>
-              <li>C</li>
-            </ul>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap">
+          <span class="pill"
+            ><span class="dot"></span>Open to software engineering
+            internships</span
+          >
+          <h1>Shantanu Kulkarni</h1>
+          <p class="role">Computer Engineering student · Developer · Builder</p>
+          <p class="sum">
+            I build backend services, cloud pipelines and LLM-powered tools:
+            things that run on a schedule, deploy themselves and tell you when
+            something breaks.
+          </p>
+          <div class="btns">
+            <a class="btn p" href="#projects">View projects</a
+            ><a class="btn" href="https://github.com/shantanu994" rel="noopener"
+              >GitHub</a
+            ><a class="btn" href="#contact">Contact me</a>
           </div>
-          <div class="skill_card">
-            <h3>Tools & Software</h3>
-            <ul>
-              <li>Git & GitHub</li>
-              <li>Visual Studio Code</li>
-            </ul>
-          </div>
-          <div class="skill_card">
-            <h3>Concepts</h3>
-            <ul>
-              <li>Data Structures & Algorithms</li>
-              <li>Object-Oriented Programming</li>
-              <li>Web Development</li>
-            </ul>
-          </div>
-          <div class="skill_card">
-            <h3>Learning Intersets</h3>
-            <ul>
-              <li>Software Development & Programming</li>
-              <li>Web Development</li>
-              <li>Data Science & Machine Learning</li>
-            </ul>
-          </div>
+          <div class="bars" id="bars" aria-hidden="true"></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="project">
-      <h2 id="section_title">My Personal & Academic Projects</h2>
-      <div class="container">
-        <div class="projects-grid">
-          <div class="project-card" id="project-1">
-            <div class="project-card-content">
-              <h3>AI Prompt Generator</h3>
-              <p id="project-desc-1">
-                Our AI Prompt Generator helps you create unique, high-quality
-                prompts tailored for ChatGPT, MidJourney, and other AI tools.
-                Whether you’re brainstorming ideas, writing content, or building
-                projects, this tool gives you fresh, creative prompts in
-                seconds.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">Javascript</span>
-              </div>
-              <a
-                href="https://github.com/shantanu994/AI-Prompt-Generator"
-                class="project-link"
-                >View on GitHub &rarr;</a
-              >
+      <section id="about">
+        <div class="wrap">
+          <h2>About</h2>
+          <p class="lead">
+            Third-year Computer Engineering student at AISSMS IOIT, Pune. I
+            prefer projects with real moving parts, such as queues, auth,
+            databases and deployment, over basic CRUD apps.
+          </p>
+          <div class="facts">
+            <div class="fact">
+              <b>What I build</b
+              ><span>Full-stack apps, background workers, CI/CD tooling</span>
             </div>
-          </div>
-
-          <div class="project-card" id="project-2">
-            <div class="project-card-content">
-              <h3>Solar Cost Estimator</h3>
-              <p id="project-desc-2">
-                The Solar Cost Estimator is a simple web tool that helps users
-                understand the potential cost and benefits of installing solar
-                panels. By entering basic details, users can instantly estimate
-                installation costs, energy savings, and payback period.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-              </div>
-              <a
-                href="https://github.com/shantanu994/Solar-Cost-Estimator"
-                class="project-link"
-                >View On GitHub &rarr;</a
-              >
+            <div class="fact">
+              <b>Where I'm exploring</b
+              ><span>Cloud and DevOps, LLM applications</span>
             </div>
-          </div>
-
-          <div class="project-card" id="project-3">
-            <div class="project-card-content">
-              <h3>Solar Charging Hub</h3>
-              <p id="project-desc-3">
-                A portable solar-powered hub for charging multiple devices on
-                the go.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">C++</span>
-                <span class="project-tag">Arduino</span>
-                <span class="project-tag">Teamwork</span>
-              </div>
-              <a
-                href="https://www.linkedin.com/posts/sharva-kale-9b581433b_engineeringstudent-solarenergy-sustainability-ugcPost-7331217218124361729-Vqjq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFLE5RIBprh8GVt36WBtavW7mGbEXXryR3c"
-                class="project-link"
-                >Learn More &rarr;</a
-              >
+            <div class="fact">
+              <b>What I'm looking for</b
+              ><span>An internship working on real engineering problems</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contact" class="contact_section">
-      <h2 class="section_title">Get in Touch!</h2>
-      <div class="container2">
-        <p class="section_description">
-          I'm always open to discussing new projects, creative ideas,
-          opportunities to be part of your vision, or collaborate on exciting
-          student projects
-        </p>
-        <div class="social-links">
-          <a class="icons" href="https://www.instagram.com/shantan.u_21/?next=%2F" target="_blank">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-              alt="Instagram"
-              width="40"
-            />
-          </a>
-          <a class="icons" href="https://www.linkedin.com/in/shantanu-kulkarni-556074329/" target="_blank">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-              alt="LinkedIn"
-              width="40"
-            />
-          </a>
-          <a class="icons" href="https://wa.me/7028914114" target="_blank">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-              alt="WhatsApp"
-              width="40"
-            />
-          </a>
-          <a class="icons" href="mailto:shantanukulkarni994@gmail.com" target="_blank">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-              alt="Email"
-              width="40"
-            />
-          </a>
+      </section>
+
+      <section id="projects">
+        <div class="wrap">
+          <h2>Projects</h2>
+          <p class="lead">
+            Five projects across backend, DevOps, AI and desktop development.
+            Open any card for the problem, approach and engineering.
+          </p>
+          <div class="grid" id="grid"></div>
+          <p class="older">
+            Earlier builds:
+            <a
+              href="https://github.com/shantanu994/AI-Prompt-Generator"
+              rel="noopener"
+              >AI Prompt Generator</a
+            >
+            (HTML/CSS/JS),
+            <a
+              href="https://github.com/shantanu994/Solar-Cost-Estimator"
+              rel="noopener"
+              >Solar Cost Estimator</a
+            >
+            (JavaScript),
+            <a
+              href="https://www.linkedin.com/posts/sharva-kale-9b581433b_engineeringstudent-solarenergy-sustainability-ugcPost-7331217218124361729-Vqjq"
+              rel="noopener"
+              >Solar Charging Hub</a
+            >
+            (C++/Arduino, team project).
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="skills">
+        <div class="wrap">
+          <h2>Skills</h2>
+          <p class="lead">
+            Grouped by what I've used in the projects above. Items in amber are
+            ones I'm still learning.
+          </p>
+          <dl>
+            <dt>Languages</dt>
+            <dd>Python, Java, C++, JavaScript</dd>
+            <dt>Backend</dt>
+            <dd>FastAPI, Flask, Node.js, REST APIs, JWT auth, Celery</dd>
+            <dt>Frontend</dt>
+            <dd>React, Vite, Tailwind CSS, HTML, CSS</dd>
+            <dt>Data</dt>
+            <dd>MySQL, PostgreSQL, Redis, SQLAlchemy, Alembic</dd>
+            <dt>Cloud and DevOps</dt>
+            <dd>Docker, GitHub Actions, CI/CD, IBM Cloud</dd>
+            <dt>AI</dt>
+            <dd>
+              Groq API, prompt engineering,
+              <span class="learn">RAG, generative AI</span>
+            </dd>
+            <dt>CS fundamentals</dt>
+            <dd>DSA, OOP, DBMS, operating systems, computer networks</dd>
+            <dt>Tools</dt>
+            <dd>Git, GitHub, VS Code, Postman, AI coding tools</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section id="journey">
+        <div class="wrap">
+          <h2>Right now</h2>
+          <p class="lead">Where I am as a student developer.</p>
+          <div class="now">
+            <div>
+              <h3>Studying</h3>
+              <p>3rd year Computer Engineering</p>
+            </div>
+            <div>
+              <h3>Learning</h3>
+              <p>LLM applications, cloud and DevOps, advanced DSA</p>
+            </div>
+            <div>
+              <h3>Building</h3>
+              <p>Practical projects that go beyond CRUD</p>
+            </div>
+            <div>
+              <h3>Preparing for</h3>
+              <p>Internships, GATE, LeetCode and competitive programming</p>
+            </div>
+          </div>
+          <p class="lead" style="margin-top: 26px">
+            All my code is on
+            <a href="https://github.com/shantanu994" rel="noopener">GitHub</a>.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <h2 class="cta">Have a project or an internship opening?</h2>
+          <p class="lead">
+            I'm happy to talk about it. Email is the fastest way to reach me.
+          </p>
+          <div class="links">
+            <a href="mailto:shantanukulkarni994@gmail.com"
+              ><small>Email</small>shantanukulkarni994@gmail.com</a
+            >
+            <a href="tel:+917028914114"><small>Phone</small>+91 70289 14114</a>
+            <a
+              href="https://www.linkedin.com/in/shantanu-kulkarni994/"
+              rel="noopener"
+              ><small>LinkedIn</small>shantanu-kulkarni994</a
+            >
+            <a href="https://github.com/shantanu994" rel="noopener"
+              ><small>GitHub</small>shantanu994</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">© 2026 Shantanu Kulkarni · Pune, India</div>
+    </footer>
+
+    <dialog id="dlg" aria-labelledby="dt"></dialog>
+    <noscript
+      ><p class="wrap">
+        Projects:
+        <a href="https://github.com/shantanu994?tab=repositories"
+          >github.com/shantanu994</a
+        >
+      </p></noscript
+    >
+
+    <script>
+      // To add or swap a project, edit this list. tier 1 = featured, 2 = large, 3 = standard.
+      const P = [
+        {
+          n: "PulseWatch",
+          tier: 1,
+          tag: "Uptime monitoring",
+          repo: "https://github.com/shantanu994/pulsewatch",
+          live: "https://pulsewatch-taupe.vercel.app",
+          d: "Register a URL and get an email the moment it goes down, without being spammed while it stays down.",
+          prob: "Knowing when a site is down without checking it by hand.",
+          sol: "Celery Beat queues a health check for every active monitor each minute. Workers record the result, and an email is sent only when a monitor changes from up to down.",
+          eng: [
+            "Async FastAPI backend with SQLAlchemy and Alembic migrations on PostgreSQL",
+            "Celery workers and Redis for scheduled background checks",
+            "JWT authentication with bcrypt password hashing",
+            "React/Vite dashboard with uptime charts and check history, polling every 45 seconds",
+            "pytest tests for task execution and downtime detection",
+            "Docker Compose for Postgres and Redis",
+          ],
+          s: [
+            "FastAPI",
+            "PostgreSQL",
+            "Redis",
+            "Celery",
+            "Docker",
+            "React",
+            "Vite",
+          ],
+        },
+        {
+          n: "DeployX",
+          tier: 2,
+          tag: "Team project · I handled cloud infrastructure and DevOps",
+          repo: "https://github.com/shantanu994/DeployX",
+          d: "A CI/CD platform that takes a GitHub push through build, test, Docker image and IBM Cloud deployment, with a dashboard for status and logs.",
+          prob: "Managing CI/CD often means jumping between GitHub, build tools, registries, cloud consoles and monitoring.",
+          sol: "One workflow from GitHub webhook to pipeline run to deployment, with a React dashboard for pipeline status and logs.",
+          eng: [
+            "GitHub webhook → build → test → Docker image → IBM Cloud deploy",
+            "My part: IBM Cloud resources, container and compute services, secrets, networking and monitoring setup",
+            "Branch and PR workflow with conventional commits",
+          ],
+          s: ["IBM Cloud", "Docker", "GitHub Actions", "React", "Vite"],
+        },
+        {
+          n: "Personalized Attendance Tracking",
+          tier: 2,
+          tag: "AI-assisted student tool",
+          repo: "https://github.com/Mitalii1/PERSONALIZED-ATTENDANCE-TRACKING",
+          d: "Upload a timetable image, extract the schedule with an LLM API, mark attendance per slot and see risk suggestions.",
+          prob: "Students lose track of attendance across subjects and batches.",
+          sol: "The timetable is extracted from an image, mapped to subjects, and attendance is marked per slot with subject-wise summaries.",
+          eng: [
+            "Groq API for timetable extraction, batch-aware (S1, S2, S3)",
+            "Flask REST API with MySQL via PyMySQL; Werkzeug password hashing",
+            "React 19 dashboard with trend forecasting and risk suggestions",
+          ],
+          s: ["React", "Flask", "MySQL", "Groq API"],
+        },
+        {
+          n: "HabitFlow",
+          tier: 3,
+          tag: "Full-stack analytics",
+          repo: "https://github.com/shantanu994/Habit-Flow",
+          d: "Habit tracker with streaks, weekly targets and a GitHub-style yearly heatmap.",
+          prob: "Staying consistent needs feedback you can see.",
+          sol: "Daily one-click logging feeds streaks, weekly on-track status and charts.",
+          eng: [
+            "Flask and SQLAlchemy on MySQL, with analytics endpoints for weekly trend and yearly heatmap",
+            "Recharts trend, bar and pie views",
+            "API endpoint to seed demo history",
+          ],
+          s: ["Flask", "React", "MySQL", "Recharts"],
+        },
+        {
+          n: "Courier Logistics System",
+          tier: 3,
+          tag: "Java desktop app",
+          repo: "https://github.com/shantanu994/Courier-Logistics-System",
+          d: "Manage customers, employees, shipments with status history, and billing from a Swing desktop app.",
+          prob: "Courier operations need one place for shipments, people and payments.",
+          sol: "CRUD panels per module over a MySQL schema, with role-based login for Admin, Manager and Courier.",
+          eng: [
+            "DAO and MVC structure with a singleton database connection",
+            "JDBC data access with a custom exception type",
+            "Shipment status flow from Pending to Delivered, with tracking history",
+          ],
+          s: ["Java", "Swing", "JDBC", "MySQL"],
+        },
+      ];
+      const $ = (s) => document.querySelector(s),
+        E = (t) =>
+          t.replace(
+            /[&<>"]/g,
+            (c) =>
+              ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+          );
+      $("#grid").innerHTML = P.map(
+        (
+          p,
+          i,
+        ) => `<article class="card t${p.tier}"><span class="tag">${E(p.tag)}</span><h3>${E(p.n)}</h3><p>${E(p.d)}</p>
+<div class="stack">${p.s.map((x) => `<span>${E(x)}</span>`).join("")}</div>
+<div class="acts"><button data-i="${i}">Project details</button><a href="${p.repo}" rel="noopener">GitHub</a>${p.live ? `<a href="${p.live}" rel="noopener">Live demo</a>` : ""}</div></article>`,
+      ).join("");
+      const dlg = $("#dlg");
+      $("#grid").addEventListener("click", (e) => {
+        const b = e.target.closest("button[data-i]");
+        if (!b) return;
+        const p = P[b.dataset.i];
+        dlg.innerHTML = `<button class="x" id="cl">Close</button><h3 id="dt">${E(p.n)}</h3><p>${E(p.tag)}</p>
+<h4>Problem</h4><p>${E(p.prob)}</p><h4>Solution</h4><p>${E(p.sol)}</p><h4>Engineering</h4><ul>${p.eng.map((x) => `<li>${E(x)}</li>`).join("")}</ul>
+<h4>Stack</h4><p>${p.s.map(E).join(", ")}</p><h4>Code</h4><p><a href="${p.repo}" rel="noopener">GitHub repository</a>${p.live ? ` · <a href="${p.live}" rel="noopener">Live demo</a>` : ""}</p>`;
+        dlg.showModal();
+        $("#cl").onclick = () => dlg.close();
+      });
+      dlg.addEventListener("click", (e) => {
+        if (e.target === dlg) dlg.close();
+      });
+      const bars = $("#bars");
+      for (let i = 0; i < 48; i++) {
+        const w = [11, 29, 37].includes(i);
+        bars.insertAdjacentHTML(
+          "beforeend",
+          `<i class="${w ? "w" : ""}" style="--i:${i};--h:${w ? 38 + (i % 3) * 8 : 70 + ((i * 37) % 30)}%"></i>`,
+        );
+      }
+      const m = $("#menu"),
+        nl = $("#nl");
+      m.onclick = () => {
+        const o = nl.classList.toggle("open");
+        m.setAttribute("aria-expanded", o);
+      };
+      nl.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+          nl.classList.remove("open");
+          m.setAttribute("aria-expanded", "false");
+        }
+      });
+    </script>
   </body>
 </html>
